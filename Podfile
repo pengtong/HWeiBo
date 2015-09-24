@@ -1,0 +1,5 @@
+platform :ios, '7.0'
+pod 'MJRefresh'
+pod 'FMDB'
+pod 'SDWebImage', '~> 3.7.2'
+pod 'MBProgressHUD', '~> 0.9.1'
