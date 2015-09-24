@@ -43,7 +43,7 @@ static NSArray *_defaultEmotion, *_emojiEmotion, *_lxhEmotion;
         }
     }
     
-    for (HHEmotion *emotion in [self emojiEmotions])
+    for (HHEmotion *emotion in [self lxhEmotions])
     {
         if ([emotion.chs isEqualToString:emotionString])
         {

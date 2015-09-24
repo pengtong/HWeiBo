@@ -17,7 +17,7 @@
 {
     if (self = [super initWithFrame:frame])
     {
-        self.textContainerInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        self.textContainerInset = UIEdgeInsetsMake(0, -5, 0, -5);
         self.editable = NO;
         self.scrollEnabled = NO;
     }
