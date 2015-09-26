@@ -34,7 +34,7 @@
 #define CHTumblrMenuViewAnimationTime 0.36
 #define CHTumblrMenuViewAnimationInterval (CHTumblrMenuViewAnimationTime / 5)
 
-#define TumblrBlue [UIColor colorWithRed:45/255.0f green:68/255.0f blue:94/255.0f alpha:1.0]
+#define TumblrBlue [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:0.9f]
 
 #define TumblrButtonTextColor [UIColor blackColor]
 #define TumblrButtonTextFont  [UIFont systemFontOfSize:15]
@@ -91,16 +91,11 @@
         [self addGestureRecognizer:ges];
         self.backgroundColor = [UIColor clearColor];
         backgroundView_ = [[UIImageView alloc] initWithFrame:self.bounds];
-        //backgroundView_.backgroundColor = TumblrBlue;
-        backgroundView_.image = [UIImage imageWithName:CHTumbleMenuViewBg];
+        backgroundView_.backgroundColor = TumblrBlue;
+//        backgroundView_.image = [UIImage imageWithName:CHTumbleMenuViewBg];
         backgroundView_.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         [self addSubview:backgroundView_];
         buttons_ = [[NSMutableArray alloc] initWithCapacity:6];
-        
-        buttomBtn = [[UIButton alloc] init];
-        [buttomBtn setBackgroundImage:[UIImage imageWithName:@"post_type_bubble_quote.png"] forState:UIControlStateNormal];
-        [buttomBtn addTarget:self action:@selector(cancal:) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:buttomBtn];
         
     }
     return self;
@@ -147,11 +142,6 @@
         button.frame = [self frameForButtonAtIndex:i];
     }
     
-    CGFloat buttomBtnX = (self.width - CHTumblrMenuViewImageHeight) / 2;
-    CGFloat buttomBtnY = self.height - CHTumblrMenuViewImageHeight - 2;
-    
-    buttomBtn.frame = CGRectMake(buttomBtnX, buttomBtnY, CHTumblrMenuViewImageHeight, CHTumblrMenuViewImageHeight);
-    
 }
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
@@ -173,9 +163,7 @@
 - (void)cancal:(UIButton *)btn
 {
     [self dropAnimation];
-    [UIView animateWithDuration:0.5f animations:^{
-        buttomBtn.transform = CGAffineTransformIdentity;
-    }];
+
     double delayInSeconds = CHTumblrMenuViewAnimationTime  + CHTumblrMenuViewAnimationInterval * (buttons_.count + 1);
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
@@ -340,9 +328,6 @@
     self.frame = topViewController.view.bounds;
     [topViewController.view addSubview:self];
     
-    [UIView animateWithDuration:0.5f animations:^{
-        buttomBtn.transform = CGAffineTransformMakeRotation(M_PI_2);
-    }];
     
     [self riseAnimation];
 }

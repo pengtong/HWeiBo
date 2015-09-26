@@ -10,14 +10,14 @@
 	<string>HaHaWeiBo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>F6534E0CEBB8D20124A80C8AFDB81AB910EE9BEA</key>
+		<key>197DC9029B554E6EE9B3BCE3C5D025D41BCD1B39</key>
 		<string>github.com:pengtong/WeiBo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>HaHaWeiBo.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F6534E0CEBB8D20124A80C8AFDB81AB910EE9BEA</key>
+		<key>197DC9029B554E6EE9B3BCE3C5D025D41BCD1B39</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F6534E0CEBB8D20124A80C8AFDB81AB910EE9BEA</string>
+	<string>197DC9029B554E6EE9B3BCE3C5D025D41BCD1B39</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F6534E0CEBB8D20124A80C8AFDB81AB910EE9BEA</string>
+			<string>197DC9029B554E6EE9B3BCE3C5D025D41BCD1B39</string>
 			<key>IDESourceControlWCCName</key>
 			<string>HaHaWeiBo</string>
 		</dict>
